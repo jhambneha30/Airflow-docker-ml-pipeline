@@ -29,13 +29,13 @@ echo "Hey the dataset is ready, let's trigger the training process"
         docker_url="unix://var/run/docker.sock",  # Use the default Docker socket
         api_version='auto',  # Use 'auto' to let Docker select the appropriate API version
         auto_remove=True,  # Remove the container when the task completes
-        image='regression-training-image:v1.0',  # Replace with your Docker image and tag
+        image='training-image:v1.0',  # Replace with your Docker image and tag
         container_name="training_my_awesome_model",
         environment={
             'MINIO_ENDPOINT': 'host.docker.internal:9000',
-            'MINIO_ACCESS_KEY_ID': 'nOmjo49pMf08zwZ4',
-            'MINIO_SECRET_ACCESS_KEY': 'DjA2RQh85I6JtDO9Kho2667XNmMNzjfo',
-            'MINIO_BUCKET_NAME': 'coder2j-awesome-ml-artifacts',
+            'MINIO_ACCESS_KEY_ID': '4BURGezVwSWhSLG9iDSu',
+            'MINIO_SECRET_ACCESS_KEY': 'GLgvClBrXkOYEs5o45C083b940Fcvu59hjwSywMA',
+            'MINIO_BUCKET_NAME': 'airflow123',
         },  # Set environment variables inside the contain
         command=['python', 'model_tuning.py'],  # Replace with the command you want to run inside the container
         # network_mode='bridge',  # Specify the network mode if needed

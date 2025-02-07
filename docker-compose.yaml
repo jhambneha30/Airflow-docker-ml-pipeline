@@ -14,4 +14,5 @@ services:
       - minio_data:/data
 
 volumes:
-  minio_data:
+  - minio_data:/data
+  - /var/run/docker.sock:/var/run/docker.sock
